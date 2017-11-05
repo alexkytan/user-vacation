@@ -1,0 +1,25 @@
+{
+  "name": "alexkytan/user-vocation",
+  "type": "library",
+  "description": "Module for managing user vacation requests.",
+  "keywords": [
+    "vacation", "vocation", "module", "approval"
+  ],
+  "homepage": "https://github.com/alexkytan/user-vocation",
+  "authors": [
+    {
+      "name": "Alex Kytan",
+      "email": "alexkytan95@gmail.com",
+      "homepage": "https://github.com/alexkytan",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php" : ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "UserVacation\\": "src/user-vacation"
+    }
+  }
+}
