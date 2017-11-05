@@ -40,7 +40,7 @@ abstract class Repository
      * @param $val
      * @return array
      */
-    public function where(string $field, $val): array
+    public function find(string $field, $val): array
     {
         $sql = 'SELECT * FROM ' . $this->tableName . ' WHERE ' . $field . ' = :val';
         $stmt = $this->db->prepare($sql);

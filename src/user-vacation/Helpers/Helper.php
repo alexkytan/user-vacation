@@ -36,6 +36,6 @@ class Helper
             return self::$configurations;
         }
 
-        return self::$configurations[$name];
+        return self::$configurations[$name] ?? false;
     }
 }
