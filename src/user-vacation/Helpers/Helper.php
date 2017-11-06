@@ -28,7 +28,7 @@ class Helper
             try {
                 self::$configurations = require Helper::CONFIG_PATH;
             } catch (\Exception $e) {
-                // TO DO
+                Logger::logException($e);
             }
         }
 

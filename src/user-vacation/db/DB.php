@@ -2,7 +2,9 @@
 
 namespace UserVacation\DB;
 
-use UserVacation\Helpers\Helper;
+use UserVacation\Helpers\{
+    Helper, Logger
+};
 
 class DB
 {
@@ -25,7 +27,7 @@ class DB
                     $dbSettings['password']
                 );
             } catch (\PDOException $e) {
-                // TO DO
+                Logger::logException($e);
             }
         }
 
