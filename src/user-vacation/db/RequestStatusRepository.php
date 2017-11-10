@@ -10,15 +10,16 @@ final class RequestStatusRepository
     const CONFIG_TABLE_NAME = 'request_status';
 
     /**
-     * @param $data
+     * @param array $data
+     *
      * @return VacationRequestStatus
      */
-    public static function formatRow($data): VacationRequestStatus
+    public static function formatRow(array $row): VacationRequestStatus
     {
         return new VacationRequestStatus(
-            $data['id'],
-            $data['slug'],
-            $data['name']
+            $row['id'],
+            $row['slug'],
+            $row['name']
         );
     }
 }

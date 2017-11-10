@@ -15,6 +15,12 @@ final class VacationRequestRepository extends Repository
      */
     public static function formatRow(array $row): VacationRequest
     {
-        // TODO: Implement formatRow() method.
+        return new VacationRequest(
+            $row['id'],
+            $row['user_id'],
+            $row['status_id'],
+            $row['start_day'],
+            $row['end_day']
+        );
     }
 }

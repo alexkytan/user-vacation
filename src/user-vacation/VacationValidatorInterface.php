@@ -3,7 +3,9 @@
 namespace UserVacation;
 
 
+use UserVacation\Entity\VacationRequest;
+
 interface VacationValidatorInterface
 {
-    public function validateVacation(): bool;
+    public function validateVacation(VacationRequest $request): bool;
 }

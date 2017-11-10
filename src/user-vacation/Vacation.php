@@ -22,12 +22,23 @@ class Vacation implements VacationCalculatorInterface, VacationValidatorInterfac
 
     public function __construct(int $user_id)
     {
-        $this->user_id = $user_id;
-        $this->vacation_requests = DB\RequestStatusRepository::create()->where('user_id', $user_id);
+        $this->user_id           = $user_id;
+        $this->vacation_requests = DB\RequestStatusRepository::create()->find('user_id', $user_id);
     }
 
-    public function validateVacation(): bool
+    /**
+     * @param Entity\VacationRequest $request
+     *
+     * @return bool
+     */
+    public function validateVacation(Entity\VacationRequest $request): bool
     {
-        // TODO: Implement validateVacation() method.
+        $duration = $this->getVacationDuration($request);
+
+        if ($this->getDaysAmount() >= $duration->d) {
+            return true;
+        }
+
+        return false;
     }
 }
