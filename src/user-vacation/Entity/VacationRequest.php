@@ -49,10 +49,13 @@ class VacationRequest extends Entity
 
     /**
      * @param int $user_id
+     * @return Entity
      */
-    public function setUserId(int $user_id)
+    public function setUserId(int $user_id): Entity
     {
         $this->user_id = $user_id;
+
+        return $this;
     }
 
     /**
@@ -65,10 +68,13 @@ class VacationRequest extends Entity
 
     /**
      * @param int $status_id
+     * @return Entity
      */
-    public function setStatusId(int $status_id)
+    public function setStatusId(int $status_id): Entity
     {
         $this->status_id = $status_id;
+
+        return $this;
     }
 
     /**
@@ -81,10 +87,13 @@ class VacationRequest extends Entity
 
     /**
      * @param string $start_day
+     * @return Entity
      */
-    public function setStartDay(string $start_day)
+    public function setStartDay(string $start_day): Entity
     {
         $this->start_day = new \DateTime($start_day);
+
+        return $this;
     }
 
     /**
@@ -97,9 +106,12 @@ class VacationRequest extends Entity
 
     /**
      * @param string $end_day
+     * @return Entity
      */
-    public function setEndDay(string $end_day)
+    public function setEndDay(string $end_day): Entity
     {
         $this->end_day = new \DateTime($end_day);
+
+        return $this;
     }
 }

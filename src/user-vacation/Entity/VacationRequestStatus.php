@@ -35,10 +35,13 @@ class VacationRequestStatus extends Entity
 
     /**
      * @param string $slug
+     * @return Entity
      */
-    public function setSlug(string $slug)
+    public function setSlug(string $slug): Entity
     {
         $this->slug = $slug;
+
+        return $this;
     }
 
     /**
@@ -51,9 +54,12 @@ class VacationRequestStatus extends Entity
 
     /**
      * @param string $name
+     * @return Entity
      */
-    public function setName(string $name)
+    public function setName(string $name): Entity
     {
         $this->name = $name;
+
+        return $this;
     }
 }
