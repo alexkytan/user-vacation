@@ -2,14 +2,16 @@
 
 namespace UserVacation\Entity;
 
-
-class User
+/**
+ * Class User
+ * @package UserVacation\Entity
+ *
+ * I added this class for example.
+ * This class should be in client code, because we are adding additional logic to application
+ * and we supposed that User class already exists.
+ */
+class User extends Entity
 {
-    /**
-     * @var int
-     */
-    public $id;
-
     /**
      * @var string
      */

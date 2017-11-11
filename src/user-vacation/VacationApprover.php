@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Александр
- * Date: 26.10.2017
- * Time: 23:14
- */
 
 namespace UserVacation;
 

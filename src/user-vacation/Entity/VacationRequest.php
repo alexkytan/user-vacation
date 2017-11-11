@@ -3,13 +3,8 @@
 namespace UserVacation\Entity;
 
 
-class VacationRequest
+class VacationRequest extends Entity
 {
-    /**
-     * @var int
-     */
-    private $id;
-
     /**
      * @var int
      */
@@ -42,22 +37,6 @@ class VacationRequest
         $this->status_id = $status_id;
         $this->start_day = new \DateTime($start_day);
         $this->end_day = new \DateTime($end_day);
-    }
-
-    /**
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param int $id
-     */
-    public function setId(int $id)
-    {
-        $this->id = $id;
     }
 
     /**
