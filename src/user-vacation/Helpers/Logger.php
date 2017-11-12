@@ -5,7 +5,7 @@ namespace UserVacation\Helpers;
 
 class Logger
 {
-    public static $log_file_path = '../../logs/user_vacation.log';
+    public static $log_file_path = USER_VACATION_LOG_FILE_DIR . '/user_vacation.log';
 
     public static function logException(\Exception $e)
     {

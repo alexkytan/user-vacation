@@ -10,7 +10,7 @@ namespace UserVacation\Helpers;
  */
 class Helper
 {
-    const CONFIG_PATH = '../../../config.php';
+    const CONFIG_PATH = USER_VACATION_BASE_DIR . '/config.php';
 
     /**
      * @var array
