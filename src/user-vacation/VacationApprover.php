@@ -3,6 +3,12 @@
 namespace UserVacation;
 
 
+use UserVacation\DB\{
+    RequestStatusRepository,
+    VacationRequestRepository
+};
+use UserVacation\Entity\VacationRequest;
+
 class VacationApprover
 {
     /**
@@ -16,18 +22,23 @@ class VacationApprover
     }
 
     /**
+     * @param VacationRequest $request
      * @return bool
      */
-    public function approveVacation(): bool
+    public static function approveVacation(VacationRequest $request): bool
     {
-        // TO DO
+        $request->setStatusId(RequestStatusRepository::VACATION_REQUEST_APPROVED);
+
+        return VacationRequestRepository::create()->save($request);
     }
 
     /**
      * @return bool
      */
-    public function rejectVacation(): bool
+    public function rejectVacation(VacationRequest $request): bool
     {
-        // TO DO
+        $request->setStatusId(RequestStatusRepository::VACATION_REQUEST_REJECTED);
+
+        return VacationRequestRepository::create()->save($request);
     }
 }
